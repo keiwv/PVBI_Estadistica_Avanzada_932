@@ -12,8 +12,8 @@ import pandas as pd
 years = list(range(1629,1711))
 
 # Generate random data for the borning babies
-boy = [random.randint(100, 1000) for _ in range(len(years))]
-girl = [random.randint(100, 1000) for _ in range(len(years))]
+boy = [random.randint(1, 100) for _ in range(len(years))]
+girl = [random.randint(1, 100) for _ in range(len(years))]
 
 # Create a data frame
 data = pd.DataFrame({'año': years,'niños': boy, 'niñas': girl})
