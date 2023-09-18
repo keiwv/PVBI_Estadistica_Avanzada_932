@@ -1,3 +1,9 @@
+
+#Created: September 17th 2023 // Last modified: September 17th 2023
+#Brayan Ivan Perez Ventura -  372781
+#Practice 2
+
+#Import of libraries
 import numpy as np
 
 #Creating a vector
@@ -11,3 +17,4 @@ for value in vector:
 #Using the line "lenght" you can know the length of the vector
 lenght = len(vector)
 print("Longitud del vector:", lenght)
+
