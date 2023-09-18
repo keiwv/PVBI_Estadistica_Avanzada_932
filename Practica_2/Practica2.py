@@ -61,3 +61,28 @@ print("Se guardó el valor de la variable x1 en x4, el resultado es: ", x4)
 #To elevate a number to another number, you can use **
 result = x4 ** 2
 print("40 elevado a la 2 es: ", result)
+
+# If you want to display only odd numbers, you can do it like this:
+# Where range will generate numbers from 1 to 66 every 2 steps and it will be saved in "secuencia_impares" 
+secuencia_impares = [x for x in range(1, 66, 2)]
+print(secuencia_impares)
+
+# If you want to print as many times as you want to a number, you can do it like this:
+vectormulti = 90
+print([vectormulti] * 5)
+
+# You can save the result in a vector as well
+save_vector = [vectormulti]  * 5
+
+# You can display a sequence of characters as well.
+
+sqence = ["Si", "No"]
+save_sequence = [sqence] * 5
+print(save_sequence)
+
+# You can open files and read them
+with open(r'C:\Users\Bryan\OneDrive\Escritorio\Universidad\Programación\Estadistica\Practica_2\example.txt', 'r') as archivo:
+    for linea in archivo:
+        print(linea)
+
+
