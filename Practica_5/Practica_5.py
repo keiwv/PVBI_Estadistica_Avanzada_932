@@ -42,3 +42,17 @@ plt.axvline(intervalo_confianza[0], color='r', linestyle='--', label='Límite in
 plt.axvline(intervalo_confianza[1], color='g', linestyle='--', label='Límite superior')
 plt.legend()
 plt.show()
+
+# Crear histogramas para alturas de hombres y mujeres
+plt.hist(alturas_hombres, bins=10, density=True, alpha=0.5, color='b', label='Alturas Hombres')
+plt.hist(alturas_mujeres, bins=10, density=True, alpha=0.5, color='r', label='Alturas Mujeres')
+
+# Etiquetas y leyenda
+plt.xlabel('Altura (cm)')
+plt.ylabel('Frecuencia')
+plt.title('Histograma de Alturas de Hombres y Mujeres')
+plt.legend()
+
+# Mostrar el gráfico
+plt.show()
+
