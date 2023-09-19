@@ -1,3 +1,7 @@
+#Created: September 19th 2023 // Last modified: September 19th 2023
+#Brayan Ivan Perez Ventura -  372781
+#Practice 5
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
