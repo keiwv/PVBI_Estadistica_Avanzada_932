@@ -3,11 +3,11 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Data
-population_standard_deviation = 40
-sample_size = 30
-sample_mean = 780
-confidence_level = 0.96  # 96% confidence
+# Problem data
+population_standard_deviation = 0.0015
+sample_size = 75
+sample_mean = 0.310
+confidence_level = 0.95  # 95% confidence
 
 # Calculate the critical value (z) using the standard normal distribution
 critical_value = stats.norm.ppf((1 + confidence_level) / 2)
@@ -30,22 +30,19 @@ plt.hist(simulated_data, bins=30, density=True, alpha=0.6, color='b', label='Dat
 plt.axvline(sample_mean, color='r', linestyle='dashed', linewidth=2, label='Media')
 
 # Labels and legend
-plt.xlabel('Duración de Vida (horas)')
-plt.ylabel('Densidad de Probabilidad')
-plt.title('Histograma de Duración de Vida de Focos')
+plt.xlabel('Profundidad (pulgadas)')
+plt.ylabel('Probabilidad')
+plt.title('Histograma de Modulos de conector de Plástico')
 plt.legend()
 
 # Show the confidence interval on the plot
-plt.axvline(lower_interval, color='g', linestyle='dashed', linewidth=2, label='Intervalo de Confianza (96%)')
+plt.axvline(lower_interval, color='g', linestyle='dashed', linewidth=2, label='Intervalo de Confianza (95%)')
 plt.axvline(upper_interval, color='g', linestyle='dashed', linewidth=2)
 
-plt.legend()
-
-# Show the plot
+# Mostrar el gráfico
 plt.show()
 
-# Print the confidence interval
-
-print("Intervalo de Confianza del 96% para la media poblacional:")
-print(f"Intervalo inferior: {lower_interval:.2f} horas")
-print(f"Intervalo superior: {upper_interval:.2f} horas")
+# Imprimir el intervalo de confianza
+print("Intervalo de Confianza del 95% para la media de las profundidades:")
+print(f"Intervalo inferior: {lower_interval:.4f} pulgadas")
+print(f"Intervalo superior: {upper_interval:.4f} pulgadas")

@@ -5,21 +5,21 @@
 import scipy.stats as stats
 import math
 
-# Datos
+# Data
 sample_size = 500
 sample_proportion = 275 / sample_size
 confidence_level = 0.90
 
-# Calcular el valor crítico Z para el nivel de confianza dado
+# Calculate the critical Z-value for the given confidence level.
 alpha = 1 - confidence_level
 z_critical = stats.norm.ppf(1 - alpha / 2)
 
-# Calcular el error estándar
+# Calculate standard error.
 standard_error = math.sqrt((sample_proportion * (1 - sample_proportion)) / sample_size)
 
-# Calcular el intervalo de confianza
+# Calculate confidence level
 confidence_interval_lower = sample_proportion - z_critical * standard_error
 confidence_interval_upper = sample_proportion + z_critical * standard_error
 
-# Mostrar el resultado
+# Show result
 print(f"Intervalo de Confianza al {confidence_level*100}%: ({confidence_interval_lower:.4f}, {confidence_interval_upper:.4f})")
