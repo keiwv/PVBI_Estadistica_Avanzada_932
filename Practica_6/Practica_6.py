@@ -20,7 +20,7 @@ y_pred_all = predict(x)
 r2 = r2_score(y, y_pred_all)
 print("Resultado de r cuadrada: ", r2)
 
-#Display Histogram with data
+#Display graph with data
 x_axis = range(90, 123)
 y_axis = predict(x_axis)
 plt.scatter(x, y)
